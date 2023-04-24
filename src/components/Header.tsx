@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import Image from 'next/image';
+import Link from 'next/link';
 import React, { useState } from 'react';
 import { BiMenuAltLeft, BiShoppingBag } from 'react-icons/bi';
 
@@ -16,13 +17,16 @@ const Header = () => {
           color='#666565'
           onClick={() => setIsMenuOpen(true)}
         />
-        <img
-          src={
-            'https://cdn.shopify.com/s/files/1/0530/2802/8612/files/final-25dials-favicon_75x.png?v=1613579839'
-          }
-          // change to nextjs image tag and change src to svg file david sends
-          alt='25 dials company logo'
-        />
+        <Link href='/'>
+          <img
+            src={
+              'https://cdn.shopify.com/s/files/1/0530/2802/8612/files/final-25dials-favicon_75x.png?v=1613579839'
+            }
+            // change to nextjs image tag and change src to svg file david sends
+            alt='25 dials company logo'
+          />
+        </Link>
+
         <BiShoppingBag
           size={36}
           className='hover:cursor-pointer'
