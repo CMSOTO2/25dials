@@ -7,6 +7,13 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        'dials-gray': '#5c5c5c',
+        'dials-blue': '#313e5b',
+      },
+      letterSpacing: {
+        'dials-spacing': '0.2em',
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
@@ -15,4 +22,4 @@ module.exports = {
     },
   },
   plugins: [],
-}
+};

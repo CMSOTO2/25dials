@@ -3,14 +3,18 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react';
 import { BiMenuAltLeft, BiShoppingBag } from 'react-icons/bi';
+import MenuSlideIn from './MenuSlideIn';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const [isShoppingCartOpen, setIsShoppingCartOpen] = useState<boolean>(false);
+  const handleMenuClose = () => {
+    setIsMenuOpen(false);
+  };
 
   return (
-    <header className='bg-white border-b top-0 left-0 sticky'>
-      <div className='flex justify-between py-4 px-[18px] items-center'>
+    <header className='sticky left-0 top-0 border-b bg-white'>
+      <div className='flex items-center justify-between px-[18px] py-4'>
         <BiMenuAltLeft
           size={36}
           className='hover:cursor-pointer'
@@ -37,12 +41,7 @@ const Header = () => {
 
       {/* open mobile menu */}
       {/* will need to do same for shopping cart*/}
-      {isMenuOpen ? (
-        <div className='absolute top-0 left-0 bottom-0'>
-          <div className='bg-black'></div>
-          <div className='bg-white w-[90%]'>menu op</div>
-        </div>
-      ) : null}
+      {isMenuOpen && <MenuSlideIn handleMenuClose={handleMenuClose} />}
     </header>
   );
 };
