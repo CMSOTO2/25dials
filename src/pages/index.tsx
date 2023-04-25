@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { Jost } from 'next/font/google';
 import Header from '@/components/Header';
 import Banner from '@/components/Banner';
+import Footer from '@/components/Footer';
 
 const jost = Jost({ subsets: ['latin'] });
 
@@ -13,6 +14,7 @@ export default function Home() {
       <main
         className={`flex min-h-screen flex-col items-center justify-between p-24 ${jost.className}`}
       ></main>
+      <Footer />
     </>
   );
 }
