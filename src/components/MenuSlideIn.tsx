@@ -7,10 +7,10 @@ const MenuSlideIn = ({ handleMenuClose }: { handleMenuClose: () => void }) => {
   return (
     <section>
       <div
-        className='absolute top-0 z-40 h-screen w-full bg-black opacity-75'
+        className='fixed bottom-0 left-0 right-0 top-0 z-40 h-screen w-full bg-black opacity-75'
         onClick={handleMenuClose}
       />
-      <div className='absolute bottom-0 left-0 top-0 z-50 flex h-screen w-[90%] flex-col bg-white px-6 pt-6 ease-in'>
+      <div className='fixed bottom-0 left-0 top-0 z-50 flex h-screen w-[90%] flex-col bg-white px-6 pt-6 ease-in'>
         <div
           className='cursor-pointer'
           aria-label='Click to close menu'
