@@ -7,12 +7,10 @@ const jost = Jost({ subsets: ['latin'] });
 
 export default function Home() {
   return (
-    <>
+    <div className={`${jost.className}`}>
       <Banner />
       <Header />
-      <main
-        className={`flex min-h-screen flex-col items-center justify-between p-24 ${jost.className}`}
-      ></main>
-    </>
+      <main className='flex min-h-screen flex-col items-center justify-between p-24'></main>
+    </div>
   );
 }

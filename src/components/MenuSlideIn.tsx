@@ -15,12 +15,17 @@ const MenuSlideIn = ({ handleMenuClose }: { handleMenuClose: () => void }) => {
           className='cursor-pointer'
           aria-label='Click to close menu'
           tabIndex={0}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter') {
+              handleMenuClose();
+            }
+          }}
         >
           <GrClose size={20} onClick={handleMenuClose} />
         </div>
 
         <div className='relative'></div>
-        <nav className='mt-10 flex flex-col'>
+        <nav className='mt-5 flex flex-col'>
           <Link
             href='/'
             className='cursor-pointer border-b py-5 text-[1rem] uppercase tracking-dials-spacing text-dials-gray'
