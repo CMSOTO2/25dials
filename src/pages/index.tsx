@@ -10,11 +10,11 @@ const itemsData = [{}, {}, {}];
 
 export default function Home() {
   return (
-    <div className={`${jost.className} font-light tracking-[.1rem]`}>
+    <div className={`${jost.className} font-light tracking-dials-spacing`}>
       <Banner />
       <Header />
       <h1 className="font py-8 text-center text-[1.9rem] uppercase">Shop</h1>
-      <main className=" gap auo-rows-max xl:px grid min-h-screen grid-cols-2 gap-x-2.5 gap-y-8 px-4 lg:grid-cols-4 lg:gap-x-6 lg:px-6">
+      <main className="grid min-h-screen auto-rows-auto grid-cols-2 gap-x-2.5 gap-y-8 px-4 lg:grid-cols-4 lg:gap-x-6 lg:px-6">
         {itemsData.map((data, index) => (
           <ProductItem
             key={index}
