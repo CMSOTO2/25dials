@@ -2,8 +2,8 @@ import React from 'react';
 
 const CardLogos = () => {
   return (
-    <div className='flex w-full gap-2 border-t bg-dials-blue pb-8 pt-7'>
-      <div className='min-w-8'>
+    <div className='border-t-[.5px]md:border-0 flex gap-2 overflow-auto bg-dials-blue pb-8 pt-7'>
+      <div className=''>
         <svg
           xmlns='http://www.w3.org/2000/svg'
           role='img'
