@@ -10,6 +10,7 @@ module.exports = {
       colors: {
         'dials-gray': '#5c5c5c',
         'dials-blue': '#313e5b',
+        'dials-lightgray': '#5c5c5c80',
       },
       letterSpacing: {
         'dials-spacing': '0.2em',

@@ -1,6 +1,6 @@
-import CommonPageTemplate from "@/components/Templates/CommonPageTemplate";
-import React from "react";
+import CommonPageTemplate from '@/components/Templates/CommonPageTemplate';
+import React from 'react';
 
 export default function sell() {
-  return <CommonPageTemplate pageTitle="Sell your watch"></CommonPageTemplate>;
+  return <CommonPageTemplate pageTitle='Sell your watch'></CommonPageTemplate>;
 }
