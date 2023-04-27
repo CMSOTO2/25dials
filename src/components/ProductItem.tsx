@@ -18,7 +18,7 @@ export default function ProductItem({
   soldOut,
 }: productItemType) {
   const soldOutTag = (
-    <span className="py-.5 absolute left-2 top-2 bg-white px-2 text-sm uppercase">
+    <span className="absolute left-2 top-2 bg-white px-2 py-0.5 text-sm uppercase">
       Sold out
     </span>
   );
@@ -34,7 +34,7 @@ export default function ProductItem({
       {soldOut && soldOutTag}
       <img className="h-auto w-full" src={src} alt={`${title},`} />
 
-      <div className="mt-4 flex flex-col items-center justify-center px-2 text-sm">
+      <div className="mt-4 flex flex-col items-center justify-center gap-2 px-[.75px] text-[12px]">
         <p>{title}</p>
         <p className="inline-block text-dials-blue">${price}</p>
       </div>

@@ -1,15 +1,15 @@
-import Image from "next/image";
-import { Jost } from "next/font/google";
-import Header from "@/components/Header";
-import Banner from "@/components/Banner";
 import ProductItem from "@/components/ProductItem";
-import ShopPageTemplate from "@/components/Templates/CommonPageTemplate";
+import ShoppingPageTemplate from "@/components/Templates/CommonPageTemplate";
 
 const itemsData = [{}, {}, {}];
 
-export default function Home() {
+export default function SoftGoodsPage() {
   return (
-    <ShopPageTemplate pageTitle="Shop" isCatalog>
+    <ShoppingPageTemplate
+      pageTitle="Soft Goods"
+      pageDescription="Timeless products for those who enjoy great history, design, and quality"
+      isCatalog
+    >
       {itemsData.map((data, index) => (
         <ProductItem
           key={index}
@@ -19,6 +19,6 @@ export default function Home() {
           title={"ROLEX DATEJUST 16013 CHAMPAGNE DIAMOND DIAL - 1984"}
         />
       ))}
-    </ShopPageTemplate>
+    </ShoppingPageTemplate>
   );
 }
