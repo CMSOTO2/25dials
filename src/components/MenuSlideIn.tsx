@@ -1,40 +1,8 @@
 import Link from "next/link";
 import { GrClose } from "react-icons/gr";
-import { AiOutlineInstagram, AiFillYoutube } from "react-icons/ai";
-import { FaFacebookF } from "react-icons/fa";
+import { navLinks, socialLinks } from "@/util/constants";
 
 const MenuSlideIn = ({ handleMenuClose }: { handleMenuClose: () => void }) => {
-  type navlinkType = {
-    title: string;
-    href: string;
-  };
-
-  const navLinks = [
-    { title: "Home", href: "/" },
-    { title: "Soft Goods", href: "/" },
-    { title: "Sell your watch", href: "/" },
-    { title: "Sold watches", href: "/" },
-    { title: "Contact us", href: "/" },
-  ] as navlinkType[];
-
-  const socialLinks = [
-    {
-      icon: <FaFacebookF size={25} color={"#5c5c5c"} />,
-      href: "https://www.facebook.com/25Dials",
-      ariaLabel: "Link to 25 dials facebook page",
-    },
-    {
-      icon: <AiOutlineInstagram size={30} color={"#5c5c5c"} />,
-      href: "https://www.instagram.com/25dials/",
-      ariaLabel: "Link to 25 dials facebook page",
-    },
-    {
-      icon: <AiFillYoutube size={30} color={"#5c5c5c"} />,
-      href: "https://www.youtube.com/channel/UCdhDaXP0EapiBowzRyeoI9Q",
-      ariaLabel: "Link to 25 dials facebook page",
-    },
-  ];
-
   return (
     <section>
       <div
@@ -61,6 +29,7 @@ const MenuSlideIn = ({ handleMenuClose }: { handleMenuClose: () => void }) => {
             <Link
               href={href}
               key={index}
+              onClick={() => handleMenuClose()}
               className="cursor-pointer border-b py-5 text-[1rem] uppercase tracking-dials-spacing text-dials-gray"
             >
               {title}
