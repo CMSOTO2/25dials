@@ -7,6 +7,7 @@ import React, { useEffect, useState } from 'react';
 import { BiMenuAltLeft, BiShoppingBag } from 'react-icons/bi';
 import { AiOutlineSearch } from 'react-icons/ai';
 import MenuSlideIn from './MenuSlideIn';
+import ShoppingCartSlideIn from './ShoppingCartSlideIn';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
@@ -17,14 +18,20 @@ const Header = () => {
   const handleMenuClose = () => {
     setIsMenuOpen(false);
   };
+  const handleShoppingCartMenuOpen = () => {
+    setIsShoppingCartOpen(true);
+  };
+  const handleShoppingCartMenuClose = () => {
+    setIsShoppingCartOpen(false);
+  };
 
   useEffect(() => {
-    if (isMenuOpen) {
+    if (isMenuOpen || isShoppingCartOpen) {
       document.body.classList.add('overflow-hidden');
     } else {
       document.body.classList.remove('overflow-hidden');
     }
-  }, [isMenuOpen]);
+  }, [isMenuOpen, isShoppingCartOpen]);
 
   return (
     <header className='sticky left-0 top-0 z-50 border-b bg-white px-[18px] py-4'>
@@ -57,15 +64,15 @@ const Header = () => {
         </Link>
 
         <BiShoppingBag
-          size={36}
+          size={30}
           className='hover:cursor-pointer lg:hidden'
           color='#666565'
-          onClick={() => setIsShoppingCartOpen(true)}
+          onClick={handleShoppingCartMenuOpen}
           tabIndex={0}
         />
 
         <div className='hidden gap-4 uppercase text-dials-gray lg:flex'>
-          <Link href='' onClick={() => setIsShoppingCartOpen(true)}>
+          <Link href='' onClick={handleShoppingCartMenuOpen}>
             Cart (0)
           </Link>
         </div>
@@ -86,6 +93,11 @@ const Header = () => {
       {/* open mobile menu */}
       {/* will need to do same for shopping cart*/}
       {isMenuOpen && <MenuSlideIn handleMenuClose={handleMenuClose} />}
+      {isShoppingCartOpen && (
+        <ShoppingCartSlideIn
+          handleShoppingCartMenuClose={handleShoppingCartMenuClose}
+        />
+      )}
     </header>
   );
 };
