@@ -34,7 +34,7 @@ export type ProductsType = {
   images: SwellImagesType[];
   meta_description: string | null;
   meta_title: string | null;
-  name?: string;
+  name: string;
   options?: any;
   price: number;
   purchase_options: PurchaseOptionsType;

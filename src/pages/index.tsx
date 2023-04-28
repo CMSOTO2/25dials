@@ -23,7 +23,7 @@ export default function Home({ data }: { data: SwellDataType }) {
             href={`/products/${product.slug}`}
             src={product.images[0].file.url}
             price={product.price}
-            title={product?.name}
+            title={product.name}
           />
         );
       })}
