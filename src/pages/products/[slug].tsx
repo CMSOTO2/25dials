@@ -28,9 +28,9 @@ export async function getStaticPaths() {
 function Product({ product }: { product: ProductsType }) {
   return (
     <div>
-      <div>{product.name}</div>
-      <div dangerouslySetInnerHTML={{ __html: product.description }}></div>
-      <img src={product.images[0].file.url} alt={product.name} />
+      <div>{product?.name}</div>
+      <div dangerouslySetInnerHTML={{ __html: product?.description }}></div>
+      <img src={product.images[0].file.url} alt={product?.name} />
       <div>${product.price}</div>
       <button>Inquiry</button>
       {/* will take us to product inquiry forum */}
