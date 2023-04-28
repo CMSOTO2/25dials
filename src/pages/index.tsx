@@ -22,8 +22,9 @@ export async function getStaticProps() {
 export default function Home({ data }: { data: SwellDataType }) {
   return (
     <CommonPageTemplate pageTitle='Shop' isCatalog>
-      {data?.results.map((product: ProductsType, index: number) => {
-        return (
+      {data?.results
+        .filter((product: ProductsType) => product.tags.includes('Watch'))
+        .map((product: ProductsType, index: number) => (
           <ProductItem
             key={index}
             href={`/products/${product.slug}`}
@@ -31,8 +32,7 @@ export default function Home({ data }: { data: SwellDataType }) {
             price={product.price}
             title={product.name}
           />
-        );
-      })}
+        ))}
     </CommonPageTemplate>
   );
 }

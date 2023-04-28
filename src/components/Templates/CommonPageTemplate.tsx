@@ -7,7 +7,7 @@ export default function CommonPageTemplate({
   children,
 }: CommonPageTemplate) {
   return (
-    <div className='mx-auto max-w-[1400px]'>
+    <div className='mx-auto mb-10 max-w-[1400px]'>
       <div className='flex flex-col items-center pb-9 pt-6 text-center'>
         <h1 className=' mb-2 text-[1.75rem] font-normal uppercase'>
           {pageTitle}
