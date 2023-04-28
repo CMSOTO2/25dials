@@ -1,25 +1,17 @@
-import React, { Children } from 'react';
-import Banner from '../Banner';
-import Header from '../Header';
-import ProductItem from '../ProductItem';
-
-export type ShoppingPageType = {
-  pageTitle: string;
-  pageDescription?: string;
-  isCatalog?: boolean;
-  children?: any;
-};
+import { CommonPageTemplate } from '@/util/types';
 
 export default function CommonPageTemplate({
   pageTitle,
   pageDescription,
   isCatalog,
   children,
-}: ShoppingPageType) {
+}: CommonPageTemplate) {
   return (
-    <div>
-      <div className='mx-auto flex max-w-4xl flex-col items-center pb-9 pt-6 text-center'>
-        <h1 className=' mb-2 text-[1.75rem] uppercase'>{pageTitle}</h1>
+    <div className='mx-auto max-w-[1400px]'>
+      <div className='flex flex-col items-center pb-9 pt-6 text-center'>
+        <h1 className=' mb-2 text-[1.75rem] font-normal uppercase'>
+          {pageTitle}
+        </h1>
         <p className='w-[90%] font-light tracking-normal'>{pageDescription}</p>
       </div>
       <main
@@ -28,8 +20,7 @@ export default function CommonPageTemplate({
           isCatalog
             ? 'grid auto-rows-auto grid-cols-2 gap-x-6 gap-y-8 lg:grid-cols-4 '
             : ''
-        }
-        min-h-screen`}
+        }`}
       >
         {children}
       </main>
