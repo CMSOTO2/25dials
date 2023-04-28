@@ -1,7 +1,10 @@
 import swell from '../../swell/swell';
 import { useRouter } from 'next/router';
 import { ProductsType, SwellImagesType } from '@/util/types';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+
 import DOMPurify from 'isomorphic-dompurify';
+import Carousel from '@/components/Carousel';
 
 export async function getStaticProps({ params }: { params: any }) {
   const swellProduct = await swell.products.get(params.slug);
@@ -32,9 +35,8 @@ function Product({ product }: { product: ProductsType }) {
   return (
     <div className='flex justify-center'>
       <section className='-mx-4 lg:mx-auto lg:flex'>
-        <div className='lg:w-[50%]'>
-          {/* add carousel here */}
-          <div className='sticky top-0'>
+        <div className='w-full lg:w-[50%]'>
+          <Carousel>
             {product?.images.map((image: SwellImagesType, idx: number) => {
               return (
                 <img
@@ -46,7 +48,7 @@ function Product({ product }: { product: ProductsType }) {
                 />
               );
             })}
-          </div>
+          </Carousel>
         </div>
 
         <div className='px-6 lg:sticky lg:top-auto lg:ml-[50px] lg:mr-[100px] lg:w-[40%]'>
