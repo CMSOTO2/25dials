@@ -3,6 +3,13 @@ export type navlinkType = {
   href: string;
 };
 
+export type CommonPageTemplate = {
+  pageTitle: string;
+  pageDescription?: string;
+  isCatalog?: boolean;
+  children?: any;
+};
+
 export type productItemType = {
   href: string;
   src: string;
