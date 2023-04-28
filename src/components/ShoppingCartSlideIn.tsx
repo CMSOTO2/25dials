@@ -13,7 +13,7 @@ const ShoppingCartSlideIn = ({
         className='fixed bottom-0 left-0 right-0 top-0 z-40 h-screen w-full bg-black opacity-40'
         onClick={handleShoppingCartMenuClose}
       />
-      <div className='fixed bottom-0 right-0 top-0 z-50 flex h-screen w-[80%] flex-col bg-white  ease-in md:w-[25%]'>
+      <div className='fixed bottom-0 right-0 top-0 z-50 flex h-screen w-[80%] flex-col bg-white  ease-in md:w-[480px]'>
         <div
           className='flex w-full  items-center justify-between px-6 py-4'
           aria-label='Click to close menu'
