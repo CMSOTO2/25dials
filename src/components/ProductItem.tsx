@@ -33,6 +33,7 @@ export default function ProductItem({
         alt={`${title}`}
         height={315}
         width={225}
+        loading='lazy'
       />
 
       <div className='mt-4 flex flex-col items-center justify-center gap-2 px-[.75px] text-[12px]'>
