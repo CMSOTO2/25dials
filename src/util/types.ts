@@ -15,10 +15,10 @@ export type SwellDataType = {
   count: number;
   page: number;
   page_count: number;
-  results: ResultsType[];
+  results: ProductsType[];
 };
 
-export type ResultsType = {
+export type ProductsType = {
   attribues?: object;
   bundle?: any;
   currency: string;
