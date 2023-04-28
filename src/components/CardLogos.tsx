@@ -157,12 +157,12 @@ const CardLogos = () => {
               y2='9.104'
               gradientUnits='userSpaceOnUse'
             >
-              <stop stop-color='#F89F20'></stop>
-              <stop offset='.25' stop-color='#F79A20'></stop>
-              <stop offset='.533' stop-color='#F68D20'></stop>
-              <stop offset='.62' stop-color='#F58720'></stop>
-              <stop offset='.723' stop-color='#F48120'></stop>
-              <stop offset='1' stop-color='#F37521'></stop>
+              <stop stopColor='#F89F20'></stop>
+              <stop offset='.25' stopColor='#F79A20'></stop>
+              <stop offset='.533' stopColor='#F68D20'></stop>
+              <stop offset='.62' stopColor='#F58720'></stop>
+              <stop offset='.723' stopColor='#F48120'></stop>
+              <stop offset='1' stopColor='#F37521'></stop>
             </linearGradient>
             <linearGradient
               id='pi-paint1_linear'
@@ -172,10 +172,10 @@ const CardLogos = () => {
               y2='6.446'
               gradientUnits='userSpaceOnUse'
             >
-              <stop stop-color='#F58720'></stop>
-              <stop offset='.359' stop-color='#E16F27'></stop>
-              <stop offset='.703' stop-color='#D4602C'></stop>
-              <stop offset='.982' stop-color='#D05B2E'></stop>
+              <stop stopColor='#F58720'></stop>
+              <stop offset='.359' stopColor='#E16F27'></stop>
+              <stop offset='.703' stopColor='#D4602C'></stop>
+              <stop offset='.982' stopColor='#D05B2E'></stop>
             </linearGradient>
           </defs>
         </svg>
@@ -225,10 +225,10 @@ const CardLogos = () => {
               y2='13.019'
               gradientUnits='userSpaceOnUse'
             >
-              <stop stop-color='#0064E1'></stop>
-              <stop offset='.4' stop-color='#0064E1'></stop>
-              <stop offset='.83' stop-color='#0073EE'></stop>
-              <stop offset='1' stop-color='#0082FB'></stop>
+              <stop stopColor='#0064E1'></stop>
+              <stop offset='.4' stopColor='#0064E1'></stop>
+              <stop offset='.83' stopColor='#0073EE'></stop>
+              <stop offset='1' stopColor='#0082FB'></stop>
             </linearGradient>
             <linearGradient
               id='pi-paint1_linear_1164_3'
@@ -238,8 +238,8 @@ const CardLogos = () => {
               y2='11.089'
               gradientUnits='userSpaceOnUse'
             >
-              <stop stop-color='#0082FB'></stop>
-              <stop offset='1' stop-color='#0064E0'></stop>
+              <stop stopColor='#0082FB'></stop>
+              <stop offset='1' stopColor='#0064E0'></stop>
             </linearGradient>
           </defs>
         </svg>
@@ -378,9 +378,9 @@ const CardLogos = () => {
           aria-labelledby='pi-venmo'
         >
           <title id='pi-venmo'>Venmo</title>
-          <g fill='none' fill-rule='evenodd'>
+          <g fill='none' fillRule='evenodd'>
             <rect
-              fill-opacity='.07'
+              fillOpacity='.07'
               fill='#000'
               width='38'
               height='24'
@@ -393,7 +393,7 @@ const CardLogos = () => {
             <path
               d='M24.675 8.36c0 3.064-2.557 7.045-4.633 9.84h-4.74L13.4 6.57l4.151-.402 1.005 8.275c.94-1.566 2.099-4.025 2.099-5.702 0-.918-.154-1.543-.394-2.058l3.78-.783c.437.738.634 1.499.634 2.46z'
               fill='#FFF'
-              fill-rule='nonzero'
+              fillRule='nonzero'
             ></path>
           </g>
         </svg>
