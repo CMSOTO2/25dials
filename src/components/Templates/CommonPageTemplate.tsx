@@ -1,16 +1,11 @@
-export type ShoppingPageType = {
-  pageTitle: string;
-  pageDescription?: string;
-  isCatalog?: boolean;
-  children?: any;
-};
+import { CommonPageTemplate } from '@/util/types';
 
 export default function CommonPageTemplate({
   pageTitle,
   pageDescription,
   isCatalog,
   children,
-}: ShoppingPageType) {
+}: CommonPageTemplate) {
   return (
     <div>
       <div className='mx-auto flex max-w-4xl flex-col items-center pb-9 pt-6 text-center'>
