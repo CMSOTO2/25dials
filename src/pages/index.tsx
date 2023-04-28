@@ -24,15 +24,20 @@ export default function Home({ data }: { data: SwellDataType }) {
     <CommonPageTemplate pageTitle='Shop' isCatalog>
       {data?.results
         .filter((product: ProductsType) => product.tags.includes('Watch'))
-        .map((product: ProductsType, index: number) => (
-          <ProductItem
-            key={index}
-            href={`/products/${product.slug}`}
-            src={product.images[0].file.url}
-            price={product.price}
-            title={product.name}
-          />
-        ))}
+        .map((product: ProductsType, index: number) => {
+          const isSoldOut = product.stock_level === 0;
+
+          return (
+            <ProductItem
+              key={index}
+              href={`/products/${product.slug}`}
+              src={product.images[0].file.url}
+              price={product.price}
+              title={product.name}
+              isSoldOut={isSoldOut}
+            />
+          );
+        })}
     </CommonPageTemplate>
   );
 }

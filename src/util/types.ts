@@ -20,7 +20,7 @@ export type productItemType = {
   src: string;
   price: number;
   title: string;
-  isSoldOut?: boolean;
+  isSoldOut: boolean;
 };
 
 export type SwellDataType = {
