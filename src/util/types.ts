@@ -14,7 +14,7 @@ export type productItemType = {
   href: string;
   src: string;
   price: number;
-  title: string;
+  title?: string;
   soldOut?: boolean;
 };
 
