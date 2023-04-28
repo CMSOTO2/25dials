@@ -26,7 +26,6 @@ export async function getStaticPaths() {
 }
 
 function Product({ product }: { product: ProductsType }) {
-  console.log(product);
   return (
     <div>
       <div>{product.name}</div>
