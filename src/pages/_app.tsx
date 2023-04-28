@@ -1,4 +1,5 @@
 import Banner from '@/components/Banner';
+import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import '@/styles/globals.css';
 import type { AppProps } from 'next/app';
@@ -14,6 +15,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <div className='px-4 lg:px-6'>
         <Component {...pageProps} />
       </div>
+      <Footer />
     </div>
   );
 }

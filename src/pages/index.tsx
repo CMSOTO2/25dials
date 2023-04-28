@@ -1,3 +1,9 @@
+import Footer from '@/components/Footer';
+import Image from 'next/image';
+import { Jost } from 'next/font/google';
+import Header from '@/components/Header';
+import Banner from '@/components/Banner';
+import ShopPageTemplate from '@/components/Templates/CommonPageTemplate';
 import swell from '../swell/swell';
 import ProductItem from '@/components/ProductItem';
 import CommonPageTemplate from '@/components/Templates/CommonPageTemplate';
@@ -23,7 +29,7 @@ export default function Home({ data }: { data: SwellDataType }) {
             href={`/products/${product.slug}`}
             src={product.images[0].file.url}
             price={product.price}
-            title={product?.name}
+            title={product.name}
           />
         );
       })}
