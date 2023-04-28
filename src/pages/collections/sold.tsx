@@ -19,6 +19,7 @@ export default function SoldPage({ data }: { data: SwellDataType }) {
       {data?.results
         .filter((product: ProductsType) => product.stock_level === 0)
         .map((product: ProductsType, index: number) => {
+          const isSoldOut = product.stock_level === 0;
           return (
             <ProductItem
               key={index}
@@ -26,6 +27,7 @@ export default function SoldPage({ data }: { data: SwellDataType }) {
               src={product.images[0].file.url}
               price={product.price}
               title={product.name}
+              isSoldOut={isSoldOut}
             />
           );
         })}

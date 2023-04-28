@@ -8,7 +8,7 @@ export default function ProductItem({
   src,
   price,
   title,
-  soldOut,
+  isSoldOut,
 }: productItemType) {
   const [isLoading, setLoading] = useState(true);
 
@@ -22,11 +22,11 @@ export default function ProductItem({
     <Link
       href={href}
       aria-label={`image, ${title}, Price: $${price}, ${
-        soldOut ? 'Sold out' : ''
+        isSoldOut ? 'Sold out' : ''
       }`}
       className='relative h-full w-full text-center font-light uppercase'
     >
-      {soldOut && soldOutTag}
+      {isSoldOut && soldOutTag}
       <img
         className='h-auto w-full'
         src={src}
