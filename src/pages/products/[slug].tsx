@@ -1,7 +1,6 @@
 import swell from '../../swell/swell';
 import { useRouter } from 'next/router';
 import { ProductsType, SwellImagesType } from '@/util/types';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 import DOMPurify from 'isomorphic-dompurify';
 import Carousel from '@/components/Carousel';
