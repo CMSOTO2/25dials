@@ -3,6 +3,11 @@ export type navlinkType = {
   href: string;
 };
 
+export type FooterNavLinksType = {
+  title: string;
+  href: string;
+};
+
 export type CommonPageTemplate = {
   pageTitle: string;
   pageDescription?: string;
@@ -14,7 +19,7 @@ export type productItemType = {
   href: string;
   src: string;
   price: number;
-  title?: string;
+  title: string;
   soldOut?: boolean;
 };
 

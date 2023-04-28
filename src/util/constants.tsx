@@ -1,5 +1,5 @@
 import { AiFillYoutube, AiOutlineInstagram } from 'react-icons/ai';
-import { navlinkType } from './types';
+import { FooterNavLinksType, navlinkType } from './types';
 import { FaFacebookF } from 'react-icons/fa';
 
 export const navLinks: navlinkType[] = [
@@ -10,6 +10,17 @@ export const navLinks: navlinkType[] = [
   { title: 'Contact us', href: '/contact' },
 ];
 
+export const footerNavLinks: FooterNavLinksType[] = [
+  { title: 'Search', href: '/search' },
+  { title: 'Soft Goods', href: '/collections/soft-goods' },
+  { title: 'Policies', href: '/policies' },
+  { title: 'Privacy Policy', href: '/privacy-policy' },
+  { title: 'Cyrptocurrency', href: '/cryptocurrency' },
+  { title: 'Terms of Service', href: '/tos' },
+  { title: 'About us', href: '/about-us' },
+  { title: 'Contact us', href: '/contact' },
+  { title: 'Refund Policy', href: '/refund-policy' },
+];
 export const socialLinks = [
   {
     icon: <FaFacebookF size={25} color={'#5c5c5c80'} />,
