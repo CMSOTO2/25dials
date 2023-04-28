@@ -1,21 +1,34 @@
 import ProductItem from '@/components/ProductItem';
 import CommonPageTemplate from '@/components/Templates/CommonPageTemplate';
+import { ProductsType, SwellDataType } from '@/util/types';
+import swell from '../../swell/swell';
 
-const itemsData = [{}, {}, {}];
+export async function getStaticProps() {
+  const swellProducts = await swell.products.list();
 
-export default function SoldPage() {
+  return {
+    props: {
+      data: swellProducts,
+    },
+  };
+}
+
+export default function SoldPage({ data }: { data: SwellDataType }) {
   return (
     <CommonPageTemplate isCatalog pageTitle='Sold'>
-      {itemsData.map((data, index) => (
-        <ProductItem
-          key={index}
-          href='/'
-          src='https://cdn.shopify.com/s/files/1/0530/2802/8612/products/DSCF1704_44a0b6ba-c46f-4d0b-9685-3e848bb84ff4_800x.jpg?v=1682356179'
-          price={1000}
-          soldOut
-          title={'ROLEX DATEJUST 16013 CHAMPAGNE DIAMOND DIAL - 1984'}
-        />
-      ))}
+      {data?.results
+        .filter((product: ProductsType) => product.stock_level === 0)
+        .map((product: ProductsType, index: number) => {
+          return (
+            <ProductItem
+              key={index}
+              href={`/products/${product.slug}`}
+              src={product.images[0].file.url}
+              price={product.price}
+              title={product.name}
+            />
+          );
+        })}
     </CommonPageTemplate>
   );
 }
