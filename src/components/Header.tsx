@@ -37,7 +37,7 @@ const Header = () => {
     <header className='sticky left-0 top-0 z-50 border-b bg-white px-[18px] py-4'>
       <div className='flex items-center justify-between '>
         <div
-          className='hover:cursor-pointer lg:hidden'
+          className='cursor-pointer lg:hidden'
           onClick={handleMenuOpen}
           tabIndex={0}
           title='Navigation Menu Icon, press Enter to open menu for links'
@@ -65,7 +65,7 @@ const Header = () => {
 
         <BiShoppingBag
           size={30}
-          className='hover:cursor-pointer lg:hidden'
+          className='cursor-pointer lg:hidden'
           color='#666565'
           onClick={handleShoppingCartMenuOpen}
           tabIndex={0}

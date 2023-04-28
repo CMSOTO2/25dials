@@ -27,18 +27,34 @@ export async function getStaticPaths() {
 
 function Product({ product }: { product: ProductsType }) {
   return (
-    <div>
-      <div>{product?.name}</div>
-      <div dangerouslySetInnerHTML={{ __html: product?.description }}></div>
+    <section className='-mx-4'>
       <img
         src={product?.images?.[0]?.file?.url}
         alt={product?.name}
         loading='lazy'
+        width={500}
       />
-      <div>${product?.price}</div>
-      <button>Inquiry</button>
-      {/* will take us to product inquiry forum */}
-    </div>
+      <div className='px-6'>
+        <div className='my-4 text-center text-dials-black'>
+          <h2 className='mb-4 font-normal uppercase'>25 dials</h2>
+          <h1 className='text-3xl font-normal '>{product?.name}</h1>
+          <div className='mt-3 text-xl font-normal text-dials-blue'>
+            <span>${product?.price}</span>
+          </div>
+        </div>
+        <hr />
+
+        <div
+          dangerouslySetInnerHTML={{ __html: product?.description }}
+          className='mt-4'
+        />
+
+        {/* will take us to product inquiry forum */}
+        <button className='my-4 w-full bg-dials-blue py-2 uppercase tracking-dials-spacing text-white'>
+          Inquire
+        </button>
+      </div>
+    </section>
   );
 }
 

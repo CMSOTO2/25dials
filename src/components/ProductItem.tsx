@@ -37,7 +37,7 @@ export default function ProductItem({
       />
 
       <div className='mt-4 flex flex-col items-center justify-center gap-2 px-[.75px] text-[12px]'>
-        <h2 className='font-normal text-[#232222]'>{title}</h2>
+        <h2 className='font-normal text-dials-black'>{title}</h2>
         <span className='inline-block text-dials-blue'>${price}</span>
       </div>
     </Link>
