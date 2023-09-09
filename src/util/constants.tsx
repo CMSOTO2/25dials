@@ -2,6 +2,14 @@ import { AiFillYoutube, AiOutlineInstagram } from 'react-icons/ai';
 import { FooterNavLinksType, navlinkType } from './types';
 import { FaFacebookF } from 'react-icons/fa';
 
+export const DefaultNoImageAvailable =
+  'https://gfsstore.com/wp-content/themes/gfsstore.com/images/no_image_available.png';
+
+export const swellCategories = {
+  watches: 'watch',
+  softGoods: 'soft-good',
+};
+
 export const navLinks: navlinkType[] = [
   { title: 'Home', href: '/' },
   { title: 'Soft Goods', href: '/collections/soft-goods' },
@@ -11,7 +19,6 @@ export const navLinks: navlinkType[] = [
 ];
 
 export const footerNavLinks: FooterNavLinksType[] = [
-  { title: 'Search', href: '/search' },
   { title: 'Soft Goods', href: '/collections/soft-goods' },
   { title: 'Policies', href: '/policies' },
   { title: 'Privacy Policy', href: '/privacy-policy' },

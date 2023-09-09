@@ -9,7 +9,7 @@ export default function CommonPageTemplate({
   return (
     <div className='mx-auto mb-10 max-w-[1400px]'>
       <div className='flex flex-col items-center pb-9 pt-6 text-center'>
-        <h1 className=' mb-2 text-[1.75rem] font-normal uppercase'>
+        <h1 className=' mb-2 text-[1.75rem] font-light uppercase'>
           {pageTitle}
         </h1>
         <p className='w-[90%] font-light tracking-normal'>{pageDescription}</p>
