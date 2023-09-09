@@ -4,7 +4,6 @@ import CardLogos from './CardLogos';
 import Link from 'next/link';
 import { footerNavLinks } from '@/util/constants';
 import { FooterNavLinksType } from '@/util/types';
-import SearchModalContext from './contexts/SearchModalContext';
 
 const Footer = ({
   setShowSearchModal,
