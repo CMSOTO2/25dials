@@ -1,3 +1,5 @@
+import { SetStateAction } from 'react';
+
 export type navlinkType = {
   title: string;
   href: string;
@@ -21,6 +23,11 @@ export type productItemType = {
   price: number;
   title: string;
   isSoldOut: boolean;
+};
+
+export type SearchModalContextType = {
+  setShowSearchModal: React.SetStateAction<boolean>;
+  showSearchModal: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
 export type SwellDataType = {

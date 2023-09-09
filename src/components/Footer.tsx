@@ -1,17 +1,27 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import SocialLogos from './SocialLogos';
 import CardLogos from './CardLogos';
 import Link from 'next/link';
 import { footerNavLinks } from '@/util/constants';
 import { FooterNavLinksType } from '@/util/types';
+import SearchModalContext from './contexts/SearchModalContext';
 
-const Footer = () => {
+const Footer = ({
+  setShowSearchModal,
+}: {
+  setShowSearchModal: (b: boolean) => void;
+}) => {
   return (
     <footer className='flex flex-col bg-dials-blue px-6 py-6 text-dials-gold md:pb-11 md:pt-20'>
       <div className='grid-cols-2 md:grid xl:grid-cols-3 2xl:grid-cols-4'>
         <div className='mb-12 md:px-10'>
           <h2 className='mb-4'>25 DIALS</h2>
           <ul className='flex flex-col gap-3 font-extralight tracking-tight'>
+            <li>
+              <Link href='' onClick={() => setShowSearchModal(true)}>
+                Search
+              </Link>
+            </li>
             {footerNavLinks.map((item: FooterNavLinksType, idx: number) => {
               return (
                 <li key={idx}>

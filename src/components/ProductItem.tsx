@@ -17,10 +17,13 @@ export default function ProductItem({
       Sold out
     </span>
   );
-
+  console.log(href);
   return (
     <Link
-      href={href}
+      href={{
+        pathname: '/products/[slug]',
+        query: { slug: href },
+      }}
       aria-label={`image, ${title}, Price: $${price}, ${
         isSoldOut ? 'Sold out' : ''
       }`}

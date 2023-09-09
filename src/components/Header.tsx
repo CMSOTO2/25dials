@@ -9,9 +9,13 @@ import { AiOutlineSearch } from 'react-icons/ai';
 import MenuSlideIn from './MenuSlideIn';
 import ShoppingCartSlideIn from './ShoppingCartSlideIn';
 
-const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
-  const [isShoppingCartOpen, setIsShoppingCartOpen] = useState<boolean>(false);
+const Header = ({
+  setShowSearchModal,
+  setIsMenuOpen,
+  isMenuOpen,
+  isShoppingCartOpen,
+  setIsShoppingCartOpen,
+}: any) => {
   const handleMenuOpen = () => {
     setIsMenuOpen(true);
   };
@@ -24,6 +28,9 @@ const Header = () => {
   const handleShoppingCartMenuClose = () => {
     setIsShoppingCartOpen(false);
   };
+  const handleSearchOpen = () => {
+    setShowSearchModal(true);
+  };
 
   useEffect(() => {
     if (isMenuOpen || isShoppingCartOpen) {
@@ -34,7 +41,7 @@ const Header = () => {
   }, [isMenuOpen, isShoppingCartOpen]);
 
   return (
-    <header className='sticky left-0 top-0 z-50 border-b bg-white px-[18px] py-4'>
+    <header className='sticky left-0 top-0 z-40 border-b bg-white px-[18px] py-4'>
       <div className='flex items-center justify-between '>
         <div
           className='cursor-pointer lg:hidden'
@@ -47,8 +54,9 @@ const Header = () => {
         </div>
 
         <Link
-          href='/search'
+          href=''
           className='hidden items-center gap-2 text-dials-lightgray lg:inline-flex'
+          onClick={handleSearchOpen}
         >
           <AiOutlineSearch />
           Search
@@ -92,7 +100,12 @@ const Header = () => {
 
       {/* open mobile menu */}
       {/* will need to do same for shopping cart*/}
-      {isMenuOpen && <MenuSlideIn handleMenuClose={handleMenuClose} />}
+      {isMenuOpen && (
+        <MenuSlideIn
+          setShowSearchModal={setShowSearchModal}
+          handleMenuClose={handleMenuClose}
+        />
+      )}
       {isShoppingCartOpen && (
         <ShoppingCartSlideIn
           handleShoppingCartMenuClose={handleShoppingCartMenuClose}

@@ -3,7 +3,13 @@ import { GrClose } from 'react-icons/gr';
 import { navLinks, socialLinks } from '@/util/constants';
 import { handleEnterKeyDown } from '@/util/utiltyFunctions';
 
-const MenuSlideIn = ({ handleMenuClose }: { handleMenuClose: () => void }) => {
+const MenuSlideIn = ({
+  handleMenuClose,
+  setShowSearchModal,
+}: {
+  handleMenuClose: () => void;
+  setShowSearchModal: () => void;
+}) => {
   return (
     <section>
       <div
@@ -34,7 +40,9 @@ const MenuSlideIn = ({ handleMenuClose }: { handleMenuClose: () => void }) => {
           ))}
         </nav>
         <div className='mt-5 tracking-wide text-dials-lightgray hover:text-dials-gray'>
-          <Link href='/search'>Search</Link>
+          <Link href='' onClick={() => setShowSearchModal(true)}>
+            Search
+          </Link>
         </div>
         <div className='mt-auto flex items-center justify-between border-t py-2 '>
           {socialLinks.map(({ icon, href, ariaLabel }, index) => (
