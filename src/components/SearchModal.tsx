@@ -49,7 +49,7 @@ export default function SearchModal({
   //   const showModalParam = urlParams.get('showModal');
   // }, []);
 
-  const SearchProduct = ({ src, name, price, href }) =>
+  const SearchProduct = ({ src, name, price, href }: any) =>
     src ? (
       <Link
         onClick={handleSearchClose}
