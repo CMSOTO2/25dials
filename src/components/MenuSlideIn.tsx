@@ -8,7 +8,7 @@ const MenuSlideIn = ({
   setShowSearchModal,
 }: {
   handleMenuClose: () => void;
-  setShowSearchModal: () => void;
+  setShowSearchModal: (boolean: boolean) => void;
 }) => {
   return (
     <section>
@@ -40,9 +40,9 @@ const MenuSlideIn = ({
           ))}
         </nav>
         <div className='mt-5 tracking-wide text-dials-lightgray hover:text-dials-gray'>
-          <Link href='' onClick={() => setShowSearchModal(true)}>
+          <a href='' onClick={() => setShowSearchModal(true)}>
             Search
-          </Link>
+          </a>
         </div>
         <div className='mt-auto flex items-center justify-between border-t py-2 '>
           {socialLinks.map(({ icon, href, ariaLabel }, index) => (
